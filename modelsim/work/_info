@@ -1,0 +1,155 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dC:/modeltech64_10.2c/examples
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+vALU
+Z1 !s110 1640617348
+Z2 I[]]CBDZV9ZO4Z6hPNkae32
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+Z4 dD:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/modelsim
+Z5 w1640602832
+Z6 8D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/ex/alu/alu.v
+Z7 FD:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/ex/alu/alu.v
+L0 1
+Z8 OL;L;10.2c;57
+r1
+31
+Z9 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z10 n@a@l@u
+Z11 !s100 Al18]PnX@^c=;0:JH]2T]2
+Z12 !s108 1640617348.206000
+Z13 !s107 D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/ex/alu/alu.v|
+Z14 !s90 -reportprogress|300|-work|work|-vopt|D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/ex/alu/alu.v|
+!i10b 1
+!s85 0
+!i111 0
+vCONTROL
+R1
+Z15 IUSZ06MAgZ25L9O9>j]bXl0
+R3
+R4
+Z16 w1640614727
+Z17 8D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/id/control.v
+Z18 FD:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/id/control.v
+L0 1
+R8
+r1
+31
+R9
+Z19 n@c@o@n@t@r@o@l
+Z20 !s100 Xz1D?62VLnNTfNg<PaY2:2
+Z21 !s108 1640617348.437000
+Z22 !s107 D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/id/control.v|
+Z23 !s90 -reportprogress|300|-work|work|-vopt|D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/id/control.v|
+!i10b 1
+!s85 0
+!i111 0
+vdata_mem
+Z24 I:bio>k]k@91MLaI<PA[FU3
+R3
+R4
+Z25 w1639121385
+Z26 8D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/data_mem.v
+Z27 FD:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/data_mem.v
+L0 1
+R8
+r1
+31
+R9
+Z28 !s110 1640617347
+Z29 !s100 6>T>fPKe3U`hd[B:aXzZc3
+Z30 !s108 1640617347.868000
+Z31 !s107 D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/data_mem.v|
+Z32 !s90 -reportprogress|300|-work|work|-vopt|D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/data_mem.v|
+!i10b 1
+!s85 0
+!i111 0
+vIF
+R1
+Z33 IVXV0WOOl`Bb>YF:6B?GUf0
+R3
+R4
+Z34 w1640606273
+Z35 8D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/if/if.v
+Z36 FD:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/if/if.v
+L0 2
+R8
+r1
+31
+R9
+n@i@f
+Z37 !s100 z4`zcKTmo8Z;6JfE`4@jb2
+Z38 !s108 1640617348.516000
+Z39 !s107 D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/if/if.v|
+Z40 !s90 -reportprogress|300|-work|work|-vopt|D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/if/if.v|
+!i10b 1
+!s85 0
+!i111 0
+vinst_mem
+Z41 Ijl^E@MQSc_oebFjKZ`FL40
+R3
+R4
+R25
+Z42 8D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/inst_mem.v
+Z43 FD:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/inst_mem.v
+L0 1
+R8
+r1
+31
+R9
+R1
+Z44 !s100 ?VR4GDg9b0D_=fGZ<=4Ao1
+Z45 !s108 1640617347.979000
+Z46 !s107 D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/inst_mem.v|
+Z47 !s90 -reportprogress|300|-work|work|-vopt|D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/inst_mem.v|
+!i10b 1
+!s85 0
+!i111 0
+vMUX
+R1
+Z48 I^6`cYPc:;2k5fGzeIz?PS2
+R3
+R4
+Z49 w1640602826
+Z50 8D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/mux/mux.v
+Z51 FD:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/mux/mux.v
+L0 1
+R8
+r1
+31
+R9
+Z52 n@m@u@x
+!i10b 1
+Z53 !s100 QgNZAkid_6VT7SXV97K`=2
+!s85 0
+Z54 !s108 1640617348.594000
+Z55 !s107 D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/mux/mux.v|
+Z56 !s90 -reportprogress|300|-work|work|-vopt|D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/mux/mux.v|
+!i111 0
+vREGISTER
+R1
+!i10b 1
+!s100 oU@S9nA^>C]eUh0<VhdFP0
+Il[SKlHJaU>I?E2_SKcAgL0
+R3
+R4
+w1640607722
+8D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/register/register.v
+FD:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/register/register.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1640617348.671000
+!s107 D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/register/register.v|
+!s90 -reportprogress|300|-work|work|-vopt|D:/Users/dzx_d/Documents/University/3-1/CO_Project/No_pipeline/register/register.v|
+!i111 0
+R9
+n@r@e@g@i@s@t@e@r

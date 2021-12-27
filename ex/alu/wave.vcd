@@ -1,0 +1,34 @@
+$date
+	Sun Dec 26 23:46:57 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module alu_tb $end
+$var reg 4 ! operation [3:0] $end
+$upscope $end
+$scope module alu_tb $end
+$var reg 64 " addend1 [63:0] $end
+$upscope $end
+$scope module alu_tb $end
+$var reg 64 # addend2 [63:0] $end
+$upscope $end
+$scope module alu_tb $end
+$var wire 1 $ zero $end
+$upscope $end
+$scope module alu_tb $end
+$var wire 64 % result [63:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10010000011101000001000 %
+0$
+b101010011110011101110001000 #
+b11010001111101001111110 "
+b0 !
+$end
+#102
