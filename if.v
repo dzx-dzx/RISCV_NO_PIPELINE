@@ -10,15 +10,16 @@ module IF #(
         input [WORD_BITWIDTH-1:0]imm,
         output reg [WORD_BITWIDTH-1:0] pc
     );
-    wire[WORD_BITWIDTH-1:0] next_pc;
+    reg [WORD_BITWIDTH-1:0] next_pc;
 
-    MUX mux(
-            .control(branch_pc&zero),
-            .in0(pc+4),
-            .in1(pc+imm<<1),
-            .out(next_pc)
-        );
-    always @(posedge clk or negedge rst)
+    wire control;
+    assign control=branch_pc&zero;
+
+    always @(control or pc)
+    begin
+        next_pc=(control)?(pc+(imm<<1)):(pc+4);
+    end
+    always @(posedge clk or posedge rst)
     begin
         if(rst)
             pc <= 0;

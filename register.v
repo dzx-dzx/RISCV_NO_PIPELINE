@@ -14,13 +14,14 @@ module REGISTER #(
         output reg [WORD_BITWIDTH-1:0] read_data2
     );
     reg [WORD_BITWIDTH-1:0] reg_file [31:0];
-    always @(posedge clk or negedge rst)
+    always @(posedge clk or posedge rst)
     begin
-        if(!rst)
-        begin
-            read_data1<=0;
-            read_data2<=0;
-        end
+        if(rst)
+        ;
+        // begin
+        //     read_data1<=0;
+        //     read_data2<=0;
+        // end
         else
         begin
             if(doRegWrite)
@@ -29,9 +30,11 @@ module REGISTER #(
                 reg_file[regToWrite]<=reg_file[regToWrite];
         end
     end
-    always @(*)
+    always @(regToRead1)
     begin
-        read_data1=reg_file[regToRead1];
-        read_data2=reg_file[regToRead2];
+        read_data1=regToRead1==0?0:reg_file[regToRead1];
+    end
+    always @(regToRead2) begin
+        read_data2=regToRead2==0?0:reg_file[regToRead2];
     end
 endmodule

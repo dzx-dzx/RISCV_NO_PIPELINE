@@ -9,14 +9,14 @@ module riscv_soc_tb();
   
        
   initial begin
-	$dumpfile("wave.vcd");
-    $dumpvars(0, riscv_soc_tb);
     clk = 1'b0;
     forever #50 clk = ~clk;
   end
       
   initial begin
-            rst = 1'b1;
+	$dumpfile("wave.vcd");
+    $dumpvars(0, riscv_soc_tb);
+			rst = 1'b1;
     #300    rst= 1'b0;
     #100000 $display("---     result is %d         ---\n", verify);
 	#1000   $finish;   

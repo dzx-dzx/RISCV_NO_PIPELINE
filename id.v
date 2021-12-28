@@ -1,4 +1,4 @@
-`include "id/control.v"
+`include "control.v"
 module ID #(
         parameter INST_R = 7'b0110011,
         parameter INST_I_LD = 7'b0000011,
@@ -45,7 +45,6 @@ module ID #(
                 .ALUSrc(ALUSrc),
                 .regWrite(regWrite)
             );
-    wire [20:0] padding;
     always @(*)
     begin
         case (instruction[6:0])

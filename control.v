@@ -64,7 +64,7 @@ module CONTROL #(
                 branch=1;
                 memRead=0;
                 memToReg=0;
-                ALUOp=2'b01;
+                ALUOp=2'b10;
                 memWrite=0;
                 ALUSrc=0;
                 regWrite=0;

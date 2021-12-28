@@ -1,1 +1,3 @@
 /wave.vcd
+*.out
+modelsim/**

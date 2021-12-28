@@ -1,9 +1,8 @@
-`include "if/if.v"
-`include "id/id.v"
-`include "ex/ex.v"
-`include "register/register.v"
-`include "mem/mem.v"
-`include "mux/mux.v"
+`include "if.v"
+`include "id.v"
+`include "ex.v"
+`include "register.v"
+`include "mem.v"
 module riscv #(
         parameter REG_NUM_BITWIDTH = 5,
         parameter WORD_BITWIDTH = 32
@@ -49,7 +48,7 @@ module riscv #(
     assign inst_ce_o=~rst;
 
     assign data_we_o=memWrite;
-    assign data_ce_o=~rst;
+    assign data_ce_o=memRead;
 
     //  instance your module  below
     IF #(
@@ -123,7 +122,8 @@ module riscv #(
             .memToReg(memToReg),
             .regWriteData(regWriteData),
             .address(data_addr_o),
-            .memWriteData(data_o)
+            .memWriteData(data_o),
+            .memReadData(data_i)
         );
 
 endmodule

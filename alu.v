@@ -6,6 +6,7 @@ module ALU #(
         parameter XOR = 4'b0011,
         parameter SLL = 4'b0100,
         parameter SRL = 4'b0101,
+        parameter LESS_THAN = 4'b0111,
         parameter REG_NUM_BITWIDTH = 5,
         parameter WORD_BITWIDTH = 32
     )(
@@ -32,6 +33,8 @@ module ALU #(
                 result = addend1<<addend2;
             SRL:
                 result = addend1>>addend2;
+            LESS_THAN:
+                result = addend1<addend2;
             default :
                 result = {WORD_BITWIDTH{1'b0}};
         endcase

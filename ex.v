@@ -1,5 +1,4 @@
-`include "ex/alu/alu.v"
-// `include "mux/mux.v"
+`include "alu.v"
 module EX #(
         parameter AND = 4'b0000,
         parameter OR = 4'b0001,
@@ -8,6 +7,7 @@ module EX #(
         parameter XOR = 4'b0011,
         parameter SLL = 4'b0100,
         parameter SRL = 4'b0101,
+        parameter LESS_THAN = 4'b0111,
         parameter REG_NUM_BITWIDTH = 5,
         parameter WORD_BITWIDTH = 32
 
@@ -23,12 +23,7 @@ module EX #(
     );
     wire [WORD_BITWIDTH-1:0] addend1,addend2;
     assign addend1=regReadData1;
-    MUX mux(
-            .control(ALUSrc),
-            .in0(regReadData2),
-            .in1(imm),
-            .out(addend2)
-        );
+    assign addend2=ALUSrc?imm:regReadData2;
 
     reg [3:0] operation;
 
@@ -47,7 +42,7 @@ module EX #(
                     3'b110:
                         operation=OR;
                     3'b000:
-                        operation=inst_ALU[3]?ADD:SUBTRACT;
+                        operation=inst_ALU[3]?SUBTRACT:ADD;
                     3'b100:
                         operation=XOR;
                     3'b001:
@@ -70,8 +65,8 @@ module EX #(
              .SUBTRACT(SUBTRACT),
              .XOR(XOR),
              .SLL(SLL),
-             .SRL(SRL)
-
+             .SRL(SRL),
+             .LESS_THAN(LESS_THAN)
          )alu(
              .operation(operation),
              .addend1(addend1),

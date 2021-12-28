@@ -4,6 +4,7 @@ module MEM #(
     )(
         input [WORD_BITWIDTH-1:0] ALUresult,
         input [WORD_BITWIDTH-1:0] regReadData2,
+        input [WORD_BITWIDTH-1:0] memReadData,
         input memWrite,
         input memRead,
         input memToReg,
@@ -13,8 +14,8 @@ module MEM #(
     );
     always @(*)
     begin
-        memWriteData=memWrite?ALUresult:memWriteData;
+        memWriteData=regReadData2;
         address=ALUresult;
-        regWriteData=memToReg?ALUresult:0;
+        regWriteData=memToReg?memReadData:ALUresult;
     end
 endmodule
