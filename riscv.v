@@ -37,6 +37,7 @@ module riscv #(
     wire [REG_NUM_BITWIDTH-1:0] regToRead1;
     wire [REG_NUM_BITWIDTH-1:0] regToRead2;
     wire [REG_NUM_BITWIDTH-1:0] regToWrite;
+    wire [6:0] opcode;
 
     wire [WORD_BITWIDTH-1:0] regReadData1;
     wire [WORD_BITWIDTH-1:0] regReadData2;
@@ -79,7 +80,8 @@ module riscv #(
            .regToRead1(regToRead1),
            .regToRead2(regToRead2),
            .regToWrite(regToWrite),
-           .imm(imm)
+           .imm(imm),
+           .opcode(opcode)
        );
 
     REGISTER #(
@@ -108,7 +110,8 @@ module riscv #(
            .ALUOp(ALUOp),
            .inst_ALU({inst_i[30],inst_i[14:12]}),
            .zero(ALUzero),
-           .ALUresult(ALUresult)
+           .ALUresult(ALUresult),
+           .opcode(opcode)
        );
 
     MEM #(

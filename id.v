@@ -21,11 +21,13 @@ module ID #(
         output [REG_NUM_BITWIDTH-1:0] regToRead1,
         output [REG_NUM_BITWIDTH-1:0] regToRead2,
         output [REG_NUM_BITWIDTH-1:0] regToWrite,
-        output reg [WORD_BITWIDTH-1:0] imm
+        output reg [WORD_BITWIDTH-1:0] imm,
+        output [6:0] opcode
     );
     assign regToRead1=instruction[19:15];
     assign regToRead2=instruction[24:20];
     assign regToWrite=instruction[11:7];
+    assign opcode=instruction[6:0];
     CONTROL #(
                 .INST_R(INST_R),
                 .INST_I_LD(INST_I_LD),

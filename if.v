@@ -17,7 +17,7 @@ module IF #(
 
     always @(control or pc)
     begin
-        next_pc=(control)?(pc+(imm<<1)):(pc+4);
+        next_pc=(control)?(pc+(imm)):(pc+4);
     end
     always @(posedge clk or posedge rst)
     begin

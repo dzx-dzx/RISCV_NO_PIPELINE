@@ -17,7 +17,7 @@ module REGISTER #(
     always @(posedge clk or posedge rst)
     begin
         if(rst)
-        ;
+            ;
         // begin
         //     read_data1<=0;
         //     read_data2<=0;
@@ -30,11 +30,12 @@ module REGISTER #(
                 reg_file[regToWrite]<=reg_file[regToWrite];
         end
     end
-    always @(regToRead1)
+    always @(regToRead1 or reg_file[regToRead1])
     begin
         read_data1=regToRead1==0?0:reg_file[regToRead1];
     end
-    always @(regToRead2) begin
+    always @(regToRead2 or reg_file[regToRead2])
+    begin
         read_data2=regToRead2==0?0:reg_file[regToRead2];
     end
 endmodule
