@@ -22,7 +22,7 @@ module IF #(
     always @(posedge clk or posedge rst)
     begin
         if(rst)
-            pc <= 0;
+            pc <= 32'hFFFFFFFC;
         else
             pc <= next_pc;
     end

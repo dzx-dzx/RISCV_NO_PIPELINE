@@ -46,7 +46,7 @@ module riscv #(
 
     wire [WORD_BITWIDTH-1:0] regWriteData;
 
-    assign inst_ce_o=~rst;
+    assign inst_ce_o = ~rst & inst_addr_o!=32'hFFFFFFFC;
 
     assign data_we_o=memWrite;
     assign data_ce_o=memRead;
