@@ -15,7 +15,7 @@ module IF #(
     wire control;
     assign control=branch_pc&zero;
 
-    always @(control or pc)
+    always @(control or pc or imm)
     begin
         next_pc=(control)?(pc+(imm)):(pc+4);
     end

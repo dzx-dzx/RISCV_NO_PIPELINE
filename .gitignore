@@ -1,3 +1,4 @@
 /wave.vcd
 *.out
 modelsim/**
+vivado

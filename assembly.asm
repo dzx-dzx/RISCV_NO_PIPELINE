@@ -1,20 +1,28 @@
-addi x31,x0,0;
-addi x1,x0,8 ;
-add  x2,x0,x1;
-addi x3,x0,7 ;
-sub  x4,x2,x3;
+addi x12,x0,12
+addi x13,x0,13
+addi x1,x0,1
+add  x2,x1,x1
+add  x3,x2,x1
+lw   x4,0(x12)
+jal  x10,main
+addi x15,x0,-1 ;
+main:
+addi x14,x10,10
 addi x5,x0,15;
+addi x14,x10,10
 and  x6,x5,x4;
 or   x7,x5,x4;
 xor  x8,x5,x4;
-addi x1,x0,1
-addi x9,x0,8
-addi x10,x0,0
-addi x11,x0,1
+addi x5,x0,1
 loop:
-sll  x11,x11,x1
-addi x10,x10,1
-blt  x10,x9,loop
-lw   x12,0(x2)
-sw   x11,0(x0)
-
+sll  x2,x2,x1
+sll  x2,x2,x1
+srl  x3,x3,x1
+srl  x3,x3,x1
+blt  x2,x12,loop
+sw   x2,0(x12)
+sub  x13,x13,x1
+beq  x12,x13,eq
+addi x15,x0,-1
+eq:
+addi x15,x0,1

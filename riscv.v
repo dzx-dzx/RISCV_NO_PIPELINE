@@ -111,7 +111,8 @@ module riscv #(
            .inst_ALU({inst_i[30],inst_i[14:12]}),
            .zero(ALUzero),
            .ALUresult(ALUresult),
-           .opcode(opcode)
+           .opcode(opcode),
+           .pc(inst_addr_o)
        );
 
     MEM #(

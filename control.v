@@ -5,7 +5,7 @@ module CONTROL #(
     parameter INST_S     = 7'b0100011,
     parameter INST_B     = 7'b1100011,
     parameter INST_J     = 7'b1101111,
-    parameter INST_U     = 7'b0010011
+    parameter INST_U     = 7'b0110111
 ) (
     input      [6:0] opcode  ,
     output reg       branch  ,
@@ -70,9 +70,23 @@ module CONTROL #(
                         regWrite = 0;
                     end
                 INST_J :
-                    ;
+                    begin
+                        branch   = 1;
+                        memRead  = 0;
+                        memToReg = 0;
+                        ALUOp    = 2'b00;
+                        memWrite = 0;
+                        ALUSrc   = 0;
+                        regWrite = 1;
+                    end
                 INST_U :
-                    ;
+                    {branch  ,
+                        memRead ,
+                        memToReg,
+                        ALUOp   ,
+                        memWrite,
+                        ALUSrc  ,
+                        regWrite}=0;
                 default :
                     {branch  ,
                         memRead ,
