@@ -34,7 +34,7 @@ module CONTROL #(
                         branch   = 0;
                         memRead  = 0;
                         memToReg = 0;
-                        ALUOp    = 2'b00;
+                        ALUOp    = 2'b10;
                         memWrite = 0;
                         ALUSrc   = 1;
                         regWrite = 1;
